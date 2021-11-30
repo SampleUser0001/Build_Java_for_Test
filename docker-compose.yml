@@ -2,7 +2,10 @@ version: '3'
 services:
   python:
     build: .
-    container_name: python
+    container_name: build_java_for_test
     volumes:
       - ./app:/opt/app
+    env_file:
+      - ./app/config/.aws/config
+      - ./app/config/.aws/credentials
     entrypoint: /opt/app/start.sh

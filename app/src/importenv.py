@@ -6,6 +6,9 @@ from enum import Enum
 
 class ImportEnvKeyEnum(Enum):
   """ .envファイルのキーを書く """
+  CREDENTIAL="credential"
+  PROFILE="profile"
+  CODE_BUILD_NAME="code_build_name"
 
 load_dotenv(verbose=True)
 

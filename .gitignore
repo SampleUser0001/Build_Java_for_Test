@@ -131,3 +131,10 @@ dmypy.json
 # log
 log/*
 !log/.gitkeep
+
+# aws-cli
+/app/config/.aws/*
+
+# work
+/work/*
+!/work/app.zip
