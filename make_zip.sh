@@ -15,7 +15,7 @@ cp -r ${PROJECT_HOME}/app ${WORK_APP}
 
 rm -rf ${WORK_APP}/config/.aws
 
-echo /dev/null > ${WORK_APP}/log/app.log
+cat /dev/null > ${WORK_APP}/log/app.log
 
 rm -rf ${WORK_APP}/src/__pycache__
 rm ${WORK_APP}/src/sample.env
