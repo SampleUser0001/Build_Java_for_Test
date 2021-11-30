@@ -7,6 +7,10 @@ WORK_APP=${PROJECT_HOME}/work/app
 if [ -d ${WORK_APP} ]; then
     rm -rf ${WORK_APP}
 fi 
+if [ -d ${WORK_DIR}/app.zip ]; then
+    rm ${WORK_DIR}/app.zip
+fi
+
 cp -r ${PROJECT_HOME}/app ${WORK_APP}
 
 rm -rf ${WORK_APP}/config/.aws
@@ -17,7 +21,8 @@ rm -rf ${WORK_APP}/src/__pycache__
 rm ${WORK_APP}/src/sample.env
 rm ${WORK_APP}/start.sh
 
-zip ${WORK_DIR}/app.zip ${WORK_APP}
+cd ${WORK_DIR}
+zip -r app.zip ./app
 
 rm -rf ${WORK_APP}
 
